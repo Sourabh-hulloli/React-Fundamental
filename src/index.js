@@ -40,3 +40,46 @@ import ReactDOM from "react-dom/client";
 // ===============================================================
 
 //? Book List Project
+
+function BookList() {
+  return (
+    <section>
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+    </section>
+  );
+}
+
+const Book = () => {
+  return (
+    <article>
+      <Image />
+      <Title />
+      <Author />
+    </article>
+  );
+};
+
+const Image = () => (
+  <img
+    src="https://m.media-amazon.com/images/I/5109aMue7OL.jpg"
+    alt="The Count of Monte Cristo: The Tale of Revenge and Redemption"
+  />
+);
+const Title = () => {
+  return (
+    <h2>
+      The Count of Monte Cristo: The Tale of Revenge and Redemption - Navigating
+      the Epic Saga of Revenge and Redemption
+    </h2>
+  );
+};
+
+const Author = () => {
+  return <h4> Alexandre Dumas</h4>;
+};
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<BookList />);
