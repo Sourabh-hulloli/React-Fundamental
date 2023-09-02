@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-function Greeting() {
-  return <h1>My First Component</h1>;
-}
+// function Greeting() {
+//   return <h1>My First Component</h1>;
+// }
 
 // function Greeting() {
 //   return React.createElement("h2", {}, "hello world");
@@ -19,6 +19,24 @@ function Greeting() {
 //   );
 // }
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+//? Nested components
+// =================================================
+// const Greeting = () => {
+//   return (
+//     <div>
+//       <Person />
+//       <Message />
+//     </div>
+//   );
+// };
 
-root.render(<Greeting />);
+// const Person = () => <h2>John doe</h2>;
+
+// const Message = () => {
+//   return <p>This is my message!</p>;
+// };
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(<Greeting />);
+// ===============================================================
+
+//? Book List Project
