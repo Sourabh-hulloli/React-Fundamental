@@ -41,7 +41,7 @@ import "./index.css";
 // ===============================================================
 
 //? Book List Project
-
+/*
 function BookList() {
   return (
     <section className="booklist">
@@ -79,6 +79,7 @@ const Title = () => {
 };
 
 const Author = () => {
+  //?  Adding inline Style with creating seperate style Object and passing that object to HTML element.
   const inlineHeadingStyles = {
     color: "#617d98",
     fontSize: "0.75rem",
@@ -90,6 +91,37 @@ const Author = () => {
     // </h4>
     //? Alternative Approach
     <h4 style={inlineHeadingStyles}>Alexander Dumas</h4>
+  );
+};
+
+*/
+
+//? ============================================
+//? Refactoring Code
+function BookList() {
+  return (
+    <section className="booklist">
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+    </section>
+  );
+}
+
+const author = "Alexander Dumas";
+const Book = () => {
+  const title =
+    "The Count of Monte Cristo: The Tale of Revenge and Redemption - Navigating the Epic Saga of Revenge and Redemption";
+  return (
+    <article className="book">
+      <img
+        src="./images/book-1.jpg"
+        alt="The Count of Monte Cristo: The Tale of Revenge and Redemption"
+      />
+      <h2>{title}</h2>
+      <h4>{author}</h4>
+    </article>
   );
 };
 
