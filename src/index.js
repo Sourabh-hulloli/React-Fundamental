@@ -98,34 +98,26 @@ const Author = () => {
 
 //? ============================================
 //? Refactoring Code
+const books = [
+  {
+    author: "Alexandre Dumas",
+    title: "The Count of Monte Cristo: The Tale of Revenge and Redemption",
+    img: "https://m.media-amazon.com/images/I/5109aMue7OL.jpg",
+  },
+  {
+    author: "Abhishek Choudhary",
+    title: "VAJPAYEE: The Ascent of the Hindu Right, 1924–1977",
+    img: "https://m.media-amazon.com/images/I/41b87IOB+LL._SX325_BO1,204,203,200_.jpg",
+  },
+];
 
-const firstBook = {
-  author: "Alexandre Dumas",
-  title: "The Count of Monte Cristo: The Tale of Revenge and Redemption",
-  img: "https://m.media-amazon.com/images/I/5109aMue7OL.jpg",
-};
-
-const secondBook = {
-  author: "Abhishek Choudhary",
-  title: "VAJPAYEE: The Ascent of the Hindu Right, 1924–1977",
-  img: "https://m.media-amazon.com/images/I/41b87IOB+LL._SX325_BO1,204,203,200_.jpg",
-};
+const names = ["john", "peter", "susan"];
+const newNames = names.map((name) => {
+  return <h1>{name}</h1>;
+});
 
 function BookList() {
-  return (
-    <section className="booklist">
-      <Book
-        author={firstBook.author}
-        title={firstBook.title}
-        img={firstBook.img}
-      ></Book>
-      <Book
-        author={secondBook.author}
-        title={secondBook.title}
-        img={secondBook.img}
-      />
-    </section>
-  );
+  return <section className="booklist">{newNames}</section>;
 }
 
 const Book = (props) => {
