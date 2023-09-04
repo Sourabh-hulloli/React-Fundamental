@@ -118,7 +118,7 @@ function BookList() {
         author={firstBook.author}
         title={firstBook.title}
         img={firstBook.img}
-      />
+      ></Book>
       <Book
         author={secondBook.author}
         title={secondBook.title}
@@ -128,7 +128,9 @@ function BookList() {
   );
 }
 
-const Book = ({ img, title, author }) => {
+const Book = (props) => {
+  const { img, title, author } = props;
+  console.log(props);
   return (
     <article className="book">
       <img src={img} alt={title} />
