@@ -103,21 +103,25 @@ const books = [
     author: "Alexandre Dumas",
     title: "The Count of Monte Cristo: The Tale of Revenge and Redemption",
     img: "https://m.media-amazon.com/images/I/5109aMue7OL.jpg",
+    id: 1,
   },
   {
     author: "Abhishek Choudhary",
     title: "VAJPAYEE: The Ascent of the Hindu Right, 1924–1977",
     img: "https://m.media-amazon.com/images/I/41b87IOB+LL._SX325_BO1,204,203,200_.jpg",
+    id: 2,
   },
 ];
 
-const names = ["john", "peter", "susan"];
-const newNames = names.map((name) => {
-  return <h1>{name}</h1>;
-});
-
 function BookList() {
-  return <section className="booklist">{newNames}</section>;
+  return (
+    <section className="booklist">
+      {books.map((book) => {
+        const { author, title, img, id } = book;
+        return <Book author={author} title={title} img={img} key={id} />;
+      })}
+    </section>
+  );
 }
 
 const Book = (props) => {
