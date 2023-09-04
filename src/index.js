@@ -99,16 +99,31 @@ const Author = () => {
 //? ============================================
 //? Refactoring Code
 
-const author = "Alexander Dumas";
-const title =
-  "The Count of Monte Cristo: The Tale of Revenge and Redemption - Navigating the Epic Saga of Revenge and Redemption";
-const img = "./images/book-1.jpg";
+const firstBook = {
+  author: "Alexandre Dumas",
+  title: "The Count of Monte Cristo: The Tale of Revenge and Redemption",
+  img: "https://m.media-amazon.com/images/I/5109aMue7OL.jpg",
+};
+
+const secondBook = {
+  author: "Abhishek Choudhary",
+  title: "VAJPAYEE: The Ascent of the Hindu Right, 1924–1977",
+  img: "https://m.media-amazon.com/images/I/41b87IOB+LL._SX325_BO1,204,203,200_.jpg",
+};
 
 function BookList() {
   return (
     <section className="booklist">
-      <Book author={author} title={title} img={img} />
-      <Book author={author} title={title} img={img} />
+      <Book
+        author={firstBook.author}
+        title={firstBook.title}
+        img={firstBook.img}
+      />
+      <Book
+        author={secondBook.author}
+        title={secondBook.title}
+        img={secondBook.img}
+      />
     </section>
   );
 }
