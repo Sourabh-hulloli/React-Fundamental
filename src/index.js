@@ -98,29 +98,28 @@ const Author = () => {
 
 //? ============================================
 //? Refactoring Code
+
+const author = "Alexander Dumas";
+const title =
+  "The Count of Monte Cristo: The Tale of Revenge and Redemption - Navigating the Epic Saga of Revenge and Redemption";
+const img = "./images/book-1.jpg";
+
 function BookList() {
   return (
     <section className="booklist">
-      <Book />
-      <Book />
-      <Book />
-      <Book />
+      <Book author={author} title={title} img={img} />
+      <Book author={author} title={title} img={img} />
     </section>
   );
 }
 
-const author = "Alexander Dumas";
-const Book = () => {
-  const title =
-    "The Count of Monte Cristo: The Tale of Revenge and Redemption - Navigating the Epic Saga of Revenge and Redemption";
+const Book = (props) => {
+  console.log(props);
   return (
     <article className="book">
-      <img
-        src="./images/book-1.jpg"
-        alt="The Count of Monte Cristo: The Tale of Revenge and Redemption"
-      />
-      <h2>{title}</h2>
-      <h4>{author}</h4>
+      <img src={props.img} alt={props.title} />
+      <h2>{props.title}</h2>
+      <h4>{props.author}</h4>
     </article>
   );
 };
