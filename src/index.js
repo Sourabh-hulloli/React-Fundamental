@@ -65,7 +65,7 @@ const Book = () => {
 
 const Image = () => (
   <img
-    src="https://m.media-amazon.com/images/I/5109aMue7OL.jpg"
+    src="./images/book-1.jpg"
     alt="The Count of Monte Cristo: The Tale of Revenge and Redemption"
   />
 );
@@ -79,7 +79,11 @@ const Title = () => {
 };
 
 const Author = () => {
-  return <h4> Alexandre Dumas</h4>;
+  return (
+    <h4 style={{ color: "#617d98", fontSize: "0.75rem", marginTop: "0.5rem" }}>
+      Alexandre Dumas
+    </h4>
+  );
 };
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
